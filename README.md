@@ -30,13 +30,15 @@ A comprehensive cargo management system for the International Space Station (ISS
 
 ### Using Docker (Recommended)
 
-1. Build the Docker image:
+1. Clone the repository:
 ```bash
-docker build -t iss-cargo .
+git clone https://github.com/adityapillai888/iss-cargo-management.git
+cd iss-cargo-management
 ```
 
-2. Run the container:
+2. Build and run the Docker container:
 ```bash
+docker build -t iss-cargo .
 docker run -p 8000:8000 iss-cargo
 ```
 
@@ -46,8 +48,8 @@ docker run -p 8000:8000 iss-cargo
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
-cd iss-cargo-system
+git clone https://github.com/adityapillai888/iss-cargo-management.git
+cd iss-cargo-management
 ```
 
 2. Install backend dependencies:
@@ -76,6 +78,8 @@ npm install
 npm start
 ```
 
+The application will be available at `http://localhost:3000`
+
 ## Project Structure
 
 ```
@@ -97,6 +101,50 @@ iss-cargo-system/
 - `/api/items/retrieve` - Retrieve items
 - `/api/logs` - System logs
 - `/api/fast-forward` - Time simulation
+
+## Usage
+
+### Basic Operations
+
+1. **Item Management**
+   - Add new items to inventory
+   - View available items
+   - Check item status and location
+
+2. **Container Management**
+   - Add new containers
+   - View container space usage
+   - Check container load
+
+3. **Item Placement**
+   - Place items in containers
+   - View optimal placement suggestions
+   - Check container space availability
+
+4. **Waste Management**
+   - Mark items as waste
+   - View waste items
+   - Track waste management activities
+
+5. **Item Retrieval**
+   - Retrieve items from containers
+   - Get retrieval instructions
+   - Check blocking items
+
+### Time Simulation
+
+The system supports time simulation for:
+- Item expiry checking
+- Waste management scheduling
+- Usage limit tracking
+
+### System Logging
+
+All operations are logged with:
+- Timestamp
+- Action details
+- Item/Container information
+- User actions
 
 ## Contributing
 
